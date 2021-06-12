@@ -3,6 +3,9 @@ from flask_restful import Resource, Api
 from flask_cors import CORS
 import cv2
 import numpy
+import os
+port = int(os.environ.get('PORT', 5000))
+
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 app = Flask(__name__)
 api = Api(app)
@@ -47,7 +50,7 @@ api.add_resource(FotoRecognize, "/fotoRecognize" , methods=["GET","POST"])
 api.add_resource(Nidzam, "/" , methods=["GET"])
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5005)
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 
 
