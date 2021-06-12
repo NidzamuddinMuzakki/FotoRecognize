@@ -50,7 +50,7 @@ api.add_resource(FotoRecognize, "/fotoRecognize" , methods=["GET","POST"])
 api.add_resource(Nidzam, "/" , methods=["GET"])
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run( port=port, debug=True)
 
 
 
