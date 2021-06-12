@@ -4,7 +4,7 @@ from flask_cors import CORS
 import cv2
 import numpy
 import os
-port = int(os.environ.get('PORT', 5000))
+port = int(os.environ.get('PORT', 33507))
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 app = Flask(__name__)
